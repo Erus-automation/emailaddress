@@ -139,9 +139,9 @@ instance PersistFieldSql EmailAddress where
     sqlType :: Proxy EmailAddress -> SqlType
     sqlType _ = sqlType (Proxy :: Proxy Text)
 
-instance QueryRunnerColumnDefault PGText EmailAddress where
-    queryRunnerColumnDefault :: QueryRunnerColumn PGText EmailAddress
-    queryRunnerColumnDefault = fieldQueryRunnerColumn
+-- instance QueryRunnerColumnDefault PGText EmailAddress where
+--     queryRunnerColumnDefault :: QueryRunnerColumn PGText EmailAddress
+--     queryRunnerColumnDefault = fieldQueryRunnerColumn
 
 -- |
 -- >>> toText $ read "\"foo@gmail.com\""
